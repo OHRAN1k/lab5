@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+</head>
+<body>
+    <form action="" method="post">
+        <p>
+            <label for="username">Логин</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label for="password">Пароль</label>
+            <input type="password" name="password">
+        </p>
+        {% if error_code==1 %}
+        <p style="color:red;">
+            Поля "Логин" и "Пароль" не могут быть пустыми!
+        </p>
+        {% endif %}
+        {% if error_code==2 %}
+        <p style="color:red;">
+            Неверный логин или пароль!
+        </p>
+        {% endif %}
+        <p>
+			<label for="login">Войти</label>
+            <input type="submit" value="login" name="login">
+			<label for="registration">Регистрация</label>
+			<input type="submit" value="registration" name="registration">
+        </p>
+    </form>
+</body>
+</html>
+            

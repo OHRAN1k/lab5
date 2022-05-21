@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <form action="" method="post">
+        <p>
+            <label for="name">Полное имя:</label>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label for="login">Логин:</label>
+            <input type="text" name="login">
+        </p>
+        <p>
+            <label for="password">Пароль:</label>
+            <input type="password" name="password">
+        </p>
+        {% if error_code==1 %}
+        <p style="color:red;">
+            Поля "Логин" и "Пароль" не могут быть пустыми!
+        </p>
+        {% endif %}
+        {% if error_code==2 %}
+        <p style="color:red;">
+            Пользователь с указанным логином уже существует!
+        </p>
+        {% endif %}
+        <p>
+			<label for="registration">Зарегистрироваться</label>
+            <input type="submit" value="registration" name="registration">
+        </p>
+    </form>
+</body>
+</html>

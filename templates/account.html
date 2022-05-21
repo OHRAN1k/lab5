@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Профиль</title>
+</head>
+<body>
+  {% if full_name and username and password %}
+    <p>Здравствуйте, {{full_name}}! </p>
+    <br>
+    <p>Ваши данные:<br> Логин: {{username}} <br> Пароль: {{password}}</p>
+  {% endif %}
+
+</body>
+</html>
